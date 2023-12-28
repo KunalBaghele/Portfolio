@@ -1,0 +1,10 @@
+.head {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0);
+  /* Optional: Add a semi-transparent white background to make text more readable */
+}
+h1{
+  color: white;
+}
