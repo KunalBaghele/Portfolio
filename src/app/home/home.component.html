@@ -26,12 +26,25 @@
     <!-- Container 2: Technical Skills -->
     <div class="col-md-6 mb-4">
       <h3 class="mt-4">Skills and Certification</h3>
-      <button class="btn btn-primary mb-3" (click)="showTechnology()">Show
-        Programming Languages</button>
+      <button class="btn btn-dark mb-3" (click)="showTechnology()">Programming
+        Languages</button>
+      <!-- child component -->
+      <app-certification
+        (certificationData)="receiveCertificationData($event)"></app-certification>
+
+      <!-- Use *ngIf to conditionally show/hide the certifications -->
+      <div *ngIf="certification">
+        <div class="card mb-3" *ngFor="let cert of certifications">
+          <div class="card-body">
+            <h5 class="card-title">{{ cert }}</h5>
+          </div>
+        </div>
+      </div>
 
       <!-- Use *ngIf to conditionally show/hide the programming languages -->
       <ul *ngIf="technology" class="list-group">
-        <li class="list-group-item" *ngFor="let language of technologies">{{language}}</li>
+        <li class="list-group-item"
+          *ngFor="let language of technologies">{{language}}</li>
       </ul>
     </div>
   </div>
