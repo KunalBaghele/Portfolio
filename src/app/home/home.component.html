@@ -1,7 +1,7 @@
-<div class="container-fluid mt-5 p-4">
+<div class="container mt-5 p-4">
   <div class="row">
     <!-- Container 1: Photo -->
-    <div class="col-md-6 mb-4">
+    <div class="col-md-6 mt-4 mb-4">
       <div class="card" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
@@ -9,8 +9,8 @@
               class="img-fluid rounded-start" alt="Profile Image">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Kunal Pritlal Baghele</h5>
+            <div class="card-body ">
+              <h5 class="card-title">Kunal Pritlal Baghele</h5><hr />
               <p class="card-text">DOB: 18-06-1999</p>
               <p class="card-text">Mobile: +91 9130246949</p>
               <p class="card-text">Email Id: kunalbaghele40&#64;gmail.com</p>
@@ -26,7 +26,13 @@
     <!-- Container 2: Technical Skills -->
     <div class="col-md-6 mb-4">
       <h3 class="mt-4">Programming Language</h3>
-      <!-- Add your technical skills content here -->
+      <button class="btn btn-primary mb-3" (click)="showTechnology()">Show
+        Programming Languages</button>
+
+      <!-- Use *ngIf to conditionally show/hide the programming languages -->
+      <ul *ngIf="technology" class="list-group">
+        <li class="list-group-item" *ngFor="let language of technologies">{{language}}</li>
+      </ul>
     </div>
   </div>
 
@@ -34,92 +40,79 @@
     <!-- Container 3: Educational Qualifications -->
     <div class="col-md-6 mb-4">
       <h3 class="mt-4">Educational Qualifications</h3>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">PG-DAC (July 2023)</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Diploma in Advanced Computing
-              (Percentage
-              -
-              61%)</li>
-            <li class="list-group-item">Full Stack Development (CDAC)</li>
-          </ul>
-        </div>
+
+      <div class="card mb-3 text-bg-success">
+        <h5 class="card-title text-center">PG-DAC (July 2023)</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Diploma in Advanced Computing
+            (Percentage
+            -
+            61%)</li>
+          <li class="list-group-item">Full Stack Development (CDAC)</li>
+        </ul>
       </div>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Bachelor of Engineering (July 2021)</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">G H Raisoni College of Engineering
-              Nagpur</li>
-            <li class="list-group-item">CGPA – 8.71</li>
-          </ul>
-        </div>
+      <div class="card mb-3 text-bg-success">
+        <h5 class="card-title text-center">Bachelor of Engineering (July
+          2021)</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">G H Raisoni College of Engineering
+            Nagpur</li>
+          <li class="list-group-item">CGPA – 8.71</li>
+        </ul>
       </div>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">XII (June 2017)</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Nanaji Joshi Jr. College, Shahapur</li>
-            <li class="list-group-item">Maharashtra State Board (Percentage –
-              71.84%)</li>
-          </ul>
-        </div>
+      <div class="card mb-3 text-bg-success">
+        <h5 class="card-title text-center">XII (June 2017)</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Nanaji Joshi Jr. College, Shahapur</li>
+          <li class="list-group-item">Maharashtra State Board (Percentage –
+            71.84%)</li>
+        </ul>
       </div>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">X (May 2015)</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Shirinbai Neterwala School, Tumsar</li>
-            <li class="list-group-item">CBSE (CGPA – 8.4)</li>
-          </ul>
-        </div>
+      <div class="card mb-3 text-bg-success">
+        <h5 class="card-title text-center">X (May 2015)</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Shirinbai Neterwala School, Tumsar</li>
+          <li class="list-group-item">CBSE (CGPA – 8.4)</li>
+        </ul>
       </div>
 
     </div>
 
     <!-- Container 4: Projects -->
-    <div class="col-md-6 mb-4">
+    <div class="col-md-6 mb-4 ">
       <h3 class="mt-4">Projects Undertaken</h3>
-      <div class="card mb-3">
-
-        <div class="card mb-3">
-          <h5 class="card-header">Farming Equipment Rental</h5>
-          <div class="card-body">
-            <h5 class="card-title">Technology Used:</h5>
-            <p class="card-text">Java, Spring Boot REST API, JPA, React.JS,
-              Bootstrap,
-              MySQL</p>
-            <h5 class="card-title">Description:</h5>
-            <p class="card-text">
-              Farming Equipment Rental simplifies the equipment booking process
-              for
-              farmers, enabling them to place orders efficiently.
-              Provide a user-friendly platform for customers, mainly farmers.
-              Implemented admin dashboard for managing orders, tracking
-              equipment
-              availability, and communicating with users and enabling them to
-              place
-              orders efficiently.
-              Pioneered the development and implementation of the Farming
-              Equipment
-              Rental website using a 3-tier architecture, designed and managed
-              the
-              database in MySQL, front-end in React.js, and back-end is
-              developed
-              Spring boot.
-            </p>
-          </div>
+      <div class="card mb-3 border-success">
+        <h5 class="card-header text-bg-success">Farming Equipment Rental</h5>
+        <div class="card-body">
+          <h5 class="card-title">Technology Used:</h5>
+          <p class="card-text">Java, Spring Boot REST API, JPA, React.JS,
+            Bootstrap,
+            MySQL</p><hr />
+          <h5 class="card-title">Description:</h5>
+          <p class="card-text">
+            Farming Equipment Rental simplifies the equipment booking process
+            for
+            farmers, enabling them to place orders efficiently.
+            Provide a user-friendly platform for customers, mainly farmers.
+            Implemented admin dashboard for managing orders, tracking
+            equipment
+            availability, and communicating with users and enabling them to
+            place
+            orders efficiently.
+            Pioneered the development and implementation of the Farming
+            Equipment
+            Rental website using a 3-tier architecture, designed and managed
+            the
+            database in MySQL, front-end in React.js, and back-end is
+            developed
+            Spring boot.
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ... (remaining content) ... -->
-
 </div>
-
-

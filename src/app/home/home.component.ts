@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  technologies: string[] = ['Java', 'SpringBoot', 'React.js', 'Angular','MySQL','Bootstrap','HTML','CSS'];
+  technology: boolean = false;
 
+  showTechnology() {
+    this.technology = !this.technology;
+  }
 }
