@@ -7,10 +7,11 @@ import { EventEmitter } from '@angular/core';
   styleUrl: './certification.component.css'
 })
 export class CertificationComponent {
+
   @Output() certificationData = new EventEmitter();
 
   sendCertificationData() {
-    const certificationInfo = "Software Testing (Automation And Manual)\n(Java-Selenium WebDriver)\n• TCS NQT - IT Foundation - 57.95%\nProgramming - 60.26%";
+    const certificationInfo = "Software Testing (Automation And Manual)\n(Java-Selenium WebDriver)\t• TCS NQT - IT Foundation - 57.95%\nProgramming - 60.26%";
     this.certificationData.emit(certificationInfo);
   }
 }

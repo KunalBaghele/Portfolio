@@ -6,28 +6,31 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  abc(){
+    alert("You clicked me..!!!");
+  }
+
   technologies: string[] = ['Java', 'SpringBoot', 'React.js', 'Angular','MySQL','Bootstrap','HTML','CSS'];
   technology: boolean = false;
-  // cert:boolean=false;
+
 
   showTechnology() {
     this.technology = !this.technology;
+    // this.cert=!this.cert;
   }
 
   certifications: string[] = []; // Initialize certifications array
-  certification: boolean = false;
+  cert:boolean=false;
 
   receiveCertificationData(certificationInfo: string) {
 
-    // this.cert=!this.cert;
-
+    this.cert=!this.cert;
+    // this.technology = !this.technology;
     console.log(certificationInfo);
 
     // Split the certificationInfo string and add to certifications array
-    this.certifications = certificationInfo.split('\n');
+    this.certifications = certificationInfo.split('\t');
 
-    // Set the certification variable to true to show the list
-    this.certification = !this.certification;
   }
 
 }
